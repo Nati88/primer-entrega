@@ -45,7 +45,7 @@
                   <li>Reaprender el patron de respitacion.</li>
                   <li>Trabajo de fuerza.</li>
                 </ul>
-                <a href="#" class="btn btn-primary">Ver màs</a>
+                <a href="#" class="btn btn-primary" onclick="openModal()">Quiero inscribirme</a>
               </div>
             </div>
             <div class="card">
@@ -57,7 +57,7 @@
                   <li>Trabajo de abdomen aumentando nivel.</li>
                   <li>trabajo de suelo pelvico aumentando nivel.</li>
                 </ul>
-                <a href="#" class="btn btn-primary">ver màs</a>
+                <a href="#" class="btn btn-primary" onclick="openModal()">Quiero inscribirme</a>
               </div>
             </div>
             <div class="card">
@@ -69,10 +69,74 @@
                   <li>Meter impacto.</li>
                   <li>Trabajo de fuerza mas avanzada con ejercicios mas complejos.</li>
                 </ul>
-                <a href="#" class="btn btn-primary">ver màs</a>
+                <a href="#" class="btn btn-primary" onclick="openModal()">Quiero inscribirme</a>
               </div>
             </div>
           </div>
+        </section>
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Formulario de Inscripción</h2>
+            <form id="formulario">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required><br><br>
+              <label for="edad">Edad:</label>
+              <input type="number" id="edad" name="edad" required><br><br>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required><br><br>
+              <label>Forma de Pago:</label><br>
+              <input type="radio" id="efectivo" name="pago" value="efectivo" required>
+              <label for="efectivo">Efectivo</label><br>
+              <input type="radio" id="credito" name="pago" value="credito">
+              <label for="credito">Crédito</label><br>
+              <input type="radio" id="mercado_pago" name="pago" value="mercado_pago">
+              <label for="mercado_pago">Mercado Pago</label><br><br>
+              <input type="submit" value="Enviar">
+          </div>
+          <div class="errorDiv" id="errorDiv"></div>
+        </div>
+        <section id="recomendaciones">
+          <h2>Testimonio de alumnas.</h2>
+          <h2>Resultado de mis planes</h2>
+          <div class="col-sm12 col-md-6 col-lg-6">
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./assets/img/Screenshot_20241012-183318.jpg" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/Screenshot_20241012-183331.jpg" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/Screenshot_20241012-183338.jpg" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/Screenshot_20241012-183342.png" class="d-block w-100">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        </section>
+        <section>
+          <h2>Si quieres recibir tips envianos tus datos!</h2>
+          <form id=formularioTips action="">
+            <label for="nombre">Nombre</label>
+            <input name="nombre" type="text" id="nombre" autocomplete="off">
+            <label for="nombre">Email</label>
+            <input name="email" type="text" id="email" autocomplete="off">
+            <label for="mensaje">Mensaje</label>
+            <input name="mensaje" type="text" id="mensaje" autocomplete="off">
+            <button>Enviar</button>
+          </form>
         </section>
         <script src="./js/incscripcion.js"></script>
     </main>

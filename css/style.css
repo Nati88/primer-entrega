@@ -32,6 +32,12 @@ h1{
     text-transform:uppercase;
     margin-top: 40px;
     margin-bottom: 40px;
+    font-weight: bold;
+}
+h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
 }
 h3{
     text-transform: uppercase;
@@ -42,43 +48,103 @@ h3{
     background-color: #e5b3cd;
 }
 .card-grid {
-    display: grid; /* Usa Grid para el contenedor */
-    grid-template-columns: repeat(3, 1fr); /* Columnas automáticas con un mínimo de 300px */
-    gap: 40px; /* Espacio entre tarjetas */
-    justify-content: center; /* Centra las tarjetas horizontalmente */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px;
+    justify-content: center;
 }
 .card {
-    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+    box-sizing: border-box;
 }
 .card {
-    border: 4px solid #ddd; /* Borde gris claro */
-    border-radius: 8px; /* Bordes redondeados */
-    overflow: hidden; /* Oculta cualquier desbordamiento de contenido */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    max-width: 400px; /* Ancho máximo de la tarjeta */
-    margin: 20px; /* Margen alrededor de la tarjeta */
+    border: 4px solid #ddd;
+    border-radius: 8px; 
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px; 
+    margin: 20px; 
 }
 .card-img-top {
-    width: 100%; /* Imagen ocupa el 100% del ancho de la tarjeta */
+    width: 100%; 
     height: 50%;
 }
 .card-body {
-    padding: 15px; /* Espaciado interno */
-    background-color: #f8f9fa; /* Fondo gris claro */
+    padding: 15px;
+    background-color: #f8f9fa;
 }
 .card-title {
-    font-size: 1.25rem; /* Tamaño de fuente del título */
-    margin-bottom: 10px; /* Espaciado debajo del título */
+    font-size: 1.25rem;
+    margin-bottom: 10px;
 }
 .card-text {
-    color: #6c757d; /* Color gris oscuro para el texto */
+    color: #6c757d;
 }
 .btn-primary {
-    background-color: #689d33; /* Color de fondo del botón */
-    border-color: forestgreen; /* Color del borde del botón */
-    color: #fff; /* Color del texto del botón */
+    background-color: #689d33; 
+    border-color: forestgreen;
+    color: #fff;
 }
 .btn-primary:hover {
-    background-color: #225d2c; /* Color de fondo del botón al pasar el ratón */
-    border-color: #173e1d; /* Color del borde del botón al pasar el ratón */
+    background-color: #225d2c;
+    border-color: #173e1d;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Fondo negro con opacidad */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% desde la parte superior */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#carouselExample {
+    margin: 100px;
+    max-width: 800px;
+}
+.carousel-item img {
+    border-radius: 10px; 
+    object-fit: cover;
+    height: 600px;
+}
+/* Botones de control */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
 }
