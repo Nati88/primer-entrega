@@ -53,7 +53,7 @@ formulario.addEventListener('submit', function(event) {
     <p>Hola ${nombre}! Has sido inscripta correctamente, 
     debido a que elegiste como método de pago ${pago}, el costo final mensual es de $${costoFinal.toFixed(2)}</p>`;
     openModal()
-    // Opcional: Reiniciar el formulario después de enviar
+    //Reiniciar el formulario después de enviar
     formulario.reset()
 })
 
@@ -99,21 +99,21 @@ document.getElementById('formularioTips').addEventListener('submit', function(ev
     }, 500)
 })
 
-// Definir la ciudad para la que quieres obtener el clima
+// Definir la ciudad
 const ciudad = 'Mendoza';
 
-// Hacer una petición GET a la API de OpenWeatherMap para obtener el clima
+// Hacer una petición GET a la API
 fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=849016c8f42decc67819f772966b717b&units=metric&lang=es`)
     .then(response => response.json())
     .then(data => {
     // Verificar que los datos se recibieron correctamente
     console.log(data);  // Verifica la respuesta completa de la API
 
-    if (data.cod === 200) {  // Verifica que el código de respuesta sea 200 (OK)
+    if (data.cod === 200) { 
         // Procesar los datos y mostrar el clima en la página
-        const temperatura = data.main.temp; // Temperatura en °C
+        const temperatura = data.main.temp; // Temperatura 
         const descripcion = data.weather[0].description; // Descripción del clima
-        const icono = data.weather[0].icon; // Icono del clima (por ejemplo, lluvia, sol, etc.)
+        const icono = data.weather[0].icon; // Icono del clima
 
         const climaContainer = document.getElementById('clima-container');
         climaContainer.innerHTML = `
@@ -128,11 +128,6 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=849016c
         const climaContainer = document.getElementById('clima-container');
         climaContainer.innerHTML = `<p>No se pudo obtener el clima para la ciudad ${ciudad}. Error: ${data.message}</p>`;
     }
-    })
-.catch(error => {
-    console.error('Error al obtener el clima:', error);
-    const climaContainer = document.getElementById('clima-container');
-    climaContainer.innerHTML = `<p>No se pudo obtener el clima. Por favor, inténtalo nuevamente más tarde.</p>`;
-});
+})
 
 
